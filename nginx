@@ -1,0 +1,10 @@
+yum install gcc-c++ 
+yum install -y pcre pcre-devel
+yum install -y zlib zlib-devel
+yum install -y openssl openssl-devel                 ####安装nginx所需组件
+wget {url:nigx}                                      ####获取nginx安装包
+tar -zxvf {nginx安装包}                               ####解压nginx安装包
+进入nginx 目录并执行 ./configure --prefix=/usr/local/nginx 意思是告诉等会安装的文件要放在哪里。(也可以不设置,直接 ./configure)
+make
+make install
+whereis nginx
